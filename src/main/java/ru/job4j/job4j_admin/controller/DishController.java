@@ -6,13 +6,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.job4j.job4j_admin.model.Dish;
 import ru.job4j.job4j_admin.service.DishService;
+import ru.job4j.job4j_admin.service.KafkaHandlingService;
 
 @Controller
 @AllArgsConstructor
 @RequestMapping("dish")
 public class DishController {
 
-    private final DishService dishService;
+    private final KafkaHandlingService dishService;
 
     @GetMapping("")
     public String getAllDishes(Model model) {
